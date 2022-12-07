@@ -31,7 +31,7 @@ def login(request):
 
 def home(request):
     products = list(Product.objects.filter(discount__gt=0).all().values())
-    return JsonResponse({"most_ordered_products": products})
+    return JsonResponse({"most_ordered_products": products, "new_5_products": []})
 
 
 def categories(request):
@@ -40,8 +40,8 @@ def categories(request):
 
 
 def shop(request):
-    # products = Pro
-    return JsonResponse({"": ""})
+    products = list(Product.objects.all().values())
+    return JsonResponse({"products": products})
 
 
 def product_page(request, product_id):

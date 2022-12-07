@@ -1,3 +1,4 @@
 Django
 gunicorn
 django_on_heroku
+django-cors-headers

@@ -31,7 +31,7 @@ class Product(models.Model):
     discount = models.IntegerField()
     old_price = models.FloatField()
     new_price = models.FloatField()
-    # main_image = models.ImageField()
+    main_image = models.TextField(null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     
     
